@@ -96,7 +96,18 @@
     box-shadow:var(--shadow);
     animation:ringPulse 5s ease-in-out infinite;
   }
-  /* ĐÃ PHÓNG TO CHỮ VÀ VÒNG TRÒN TRONG AVATAR */
+  
+  /* ĐÃ SỬA LỖI: Thêm thuộc tính khống chế kích thước ảnh đại diện */
+  .hero-ring img {
+    width: 140px;
+    height: 140px;
+    border-radius: 18px;
+    object-fit: cover; /* Giúp ảnh không bị méo, tự động cắt theo tỷ lệ vuông */
+    display: block;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Giữ lại cấu trúc cũ phòng trường hợp dùng text ẩn */
   .hero-ring span{
     width:140px;
     height:140px;
@@ -254,6 +265,7 @@
     .stat-row{gap:30px;}
     /* Giảm nhẹ kích thước trên di động để cân đối màn hình */
     .hero-ring { width:130px; height:130px; }
+    .hero-ring img { width:114px; height:114px; border-radius: 14px; }
     .hero-ring span { width:114px; height:114px; font-size:2.8rem; }
   }
 </style>
@@ -289,8 +301,8 @@
   <div class="wrap">
     <div class="reveal hero-badge">🌷 Góc nhỏ lưu trữ · Học phần Nhập môn Công nghệ số</div>
     <div class="hero-ring reveal">
-  <img src="baongoc.jpg" alt="Avatar Bảo Ngọc">
-</div>
+      <img src="baongoc.jpg" alt="Avatar Bảo Ngọc">
+    </div>
     <h1 class="reveal">Trần Bảo Ngọc</h1>
     <p class="hero-sub reveal">Không gian lưu niệm tổng hợp chuỗi 6 bài tập thực hành trong học kỳ qua. Nơi mình ghi lại hành trình làm quen với cách tối ưu hóa dữ liệu, rèn luyện tư duy sàng lọc và tiếp cận các công cụ thông minh một cách bài bản, gắn liền với thực tiễn học tập của một sinh viên ngoại ngữ.</p>
     <div class="info-chips reveal">
